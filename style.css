@@ -681,6 +681,11 @@ body.light-theme .project-features {
     gap: 1.5rem;
 }
 
+.contact-box.two-cards {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
 .contact-card {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
