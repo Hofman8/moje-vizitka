@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Povinný požadavek zadání: Zákaz indexování ve vyhledávačích -->
+    <meta name="robots" content="noindex, nofollow, noarchive">
+    <title>Lukáš Hofman | Digitální vizitka & Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body class="dark-theme">
+    <!-- Navigace -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-accent">&lt;LH /&gt;</span> Lukáš Hofman
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#about" class="nav-link">O mně</a></li>
+                    <li><a href="#skills" class="nav-link">Dovednosti</a></li>
+                    <li><a href="#projects" class="nav-link">Projekty</a></li>
+                    <li><a href="#future" class="nav-link">Budoucnost</a></li>
+                    <li><a href="#contact" class="nav-link">Kontakt</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <!-- Interaktivní prvek: Přepínač Dark / Light módu -->
+                <button id="theme-toggle" class="theme-toggle" aria-label="Přepnout barevný režim" title="Přepnout tmavý / světlý režim">
+                    <span class="theme-icon sun-icon">☀️</span>
+                    <span class="theme-icon moon-icon">🌙</span>
+                </button>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Otevřít menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. Hero sekce (Úvodní představení) -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-badge">⚡ Student Elektrotechniky & Sportovec</div>
+                <h1 class="hero-title">Ahoj, já jsem <span class="gradient-text">Lukáš Hofman</span></h1>
+                <p class="hero-subtitle">
+                    Student 4. ročníku na <strong>SPŠ, SOŠ a SOU Hradební</strong> v Hradci Králové se zaměřením na <strong>elektrotechniku</strong>.
+                </p>
+                <p class="hero-motto">
+                    <em>„Spojuji technickou preciznost elektrotechniky s vytrvalostí a týmovým duchem ze sportovního hřiště.“</em>
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">Moje projekty</a>
+                    <a href="#contact" class="btn btn-secondary">Kontaktovat mě</a>
+                </div>
+                
+                <div class="hero-highlights">
+                    <div class="highlight-item">
+                        <span class="highlight-num">4.</span>
+                        <span class="highlight-label">Ročník studia</span>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-num">2+</span>
+                        <span class="highlight-label">Technické projekty</span>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-num">100%</span>
+                        <span class="highlight-label">Tah na branku</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. O mně -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Představení</span>
+                    <h2 class="section-title">O mně</h2>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-card">
+                        <div class="about-icon">⚡</div>
+                        <h3>Technická vášeň</h3>
+                        <p>
+                            V elektrotechnice mě baví vidět reálný výsledek – jak se z teorie, součástek a zapojení stane fungující hardware. Fascinuje mě moderní elektronika, řízení napájení a propojování hardwaru s digitálním světem.
+                        </p>
+                    </div>
+
+                    <div class="about-card">
+                        <div class="about-icon">🏒</div>
+                        <h3>Sportovní disciplína</h3>
+                        <p>
+                            Aktivně hraju <strong>lední hokej a florbal</strong> a obecně mě baví všechny sporty. Sport mě naučil disciplíně, vytrvalosti, férovosti a schopnosti fungovat a táhnout za jeden provaz v týmu i pod tlakem.
+                        </p>
+                    </div>
+
+                    <div class="about-card">
+                        <div class="about-icon">🚀</div>
+                        <h3>Můj přístup k práci</h3>
+                        <p>
+                            Když se do něčeho pustím, chci tomu rozumět od základů. Nezaleknu se hledání chyb v zapojení ani v kódu. Rád přicházím s praktickými nápady, které lidem řeší každodenní starosti.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Dovednosti -->
+        <section id="skills" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Znalosti & Schopnosti</span>
+                    <h2 class="section-title">Moje dovednosti</h2>
+                    <p class="section-desc">Interaktivní přehled mých technických i osobních dovedností.</p>
+                </div>
+
+                <!-- Interaktivní filtr kategorií -->
+                <div class="skills-filter">
+                    <button class="filter-btn active" data-filter="all">Všechny</button>
+                    <button class="filter-btn" data-filter="electro">Elektrotechnika</button>
+                    <button class="filter-btn" data-filter="software">IT & Nástroje</button>
+                    <button class="filter-btn" data-filter="soft">Osobní přednosti</button>
+                </div>
+
+                <div class="skills-grid" id="skills-grid">
+                    <!-- Elektrotechnika -->
+                    <div class="skill-pill" data-category="electro">
+                        <span class="skill-icon">🔌</span>
+                        <div class="skill-info">
+                            <h4>Měření & diagnostika</h4>
+                            <p>Práce s multimetrem, osciloskopem, laboratorním zdrojem</p>
+                        </div>
+                    </div>
+                    <div class="skill-pill" data-category="electro">
+                        <span class="skill-icon">⚡</span>
+                        <div class="skill-info">
+                            <h4>Návrh & pájení obvodů</h4>
+                            <p>Čtení schémat, osazování součástek, tvorba plošných spojů</p>
+                        </div>
+                    </div>
+                    <div class="skill-pill" data-category="electro">
+                        <span class="skill-icon">🔋</span>
+                        <div class="skill-info">
+                            <h4>Akumulátory & napájení</h4>
+                            <p>BMS obvody, správa Li-Ion článků, bezpečné nabíjení</p>
+                        </div>
+                    </div>
+
+                    <!-- Software / IT -->
+                    <div class="skill-pill" data-category="software">
+                        <span class="skill-icon">💻</span>
+                        <div class="skill-info">
+                            <h4>Webové technologie</h4>
+                            <p>HTML5, moderní CSS3, základy JavaScriptu, responzivita</p>
+                        </div>
+                    </div>
+                    <div class="skill-pill" data-category="software">
+                        <span class="skill-icon">🐙</span>
+                        <div class="skill-info">
+                            <h4>Git & GitHub</h4>
+                            <p>Verzování projektů, správa repozitářů, GitHub Pages</p>
+                        </div>
+                    </div>
+                    <div class="skill-pill" data-category="software">
+                        <span class="skill-icon">🤖</span>
+                        <div class="skill-info">
+                            <h4>Moderní AI nástroje</h4>
+                            <p>Využití AI pro ladění kódu, konzultace zapojení a produktivitu</p>
+                        </div>
+                    </div>
+
+                    <!-- Soft skills -->
+                    <div class="skill-pill" data-category="soft">
+                        <span class="skill-icon">🤝</span>
+                        <div class="skill-info">
+                            <h4>Týmová práce</h4>
+                            <p>Důvěra a komunikace ověřená v hokejové i florbalové šatně</p>
+                        </div>
+                    </div>
+                    <div class="skill-pill" data-category="soft">
+                        <span class="skill-icon">🎯</span>
+                        <div class="skill-info">
+                            <h4>Vytrvalost & disciplína</h4>
+                            <p>Schopnost dotahovat úkoly do konce i přes počáteční překážky</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Projekty a úspěchy -->
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Praxe & Realizace</span>
+                    <h2 class="section-title">Moje projekty</h2>
+                    <p class="section-desc">Ukázka prací, na kterých jsem pracoval a kde propojuji elektrotechniku s moderními technologiemi.</p>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Projekt 1 -->
+                    <article class="project-card featured">
+                        <div class="project-badge">Hlavní projekt</div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <span class="project-category">Hardware & IoT řešení</span>
+                                <h3 class="project-title">Systém pro půjčování powerbank</h3>
+                            </div>
+                            <p class="project-text">
+                                Koncept a technický návrh automatizované sdílené stanice na půjčování powerbank pro studenty a návštěvníky veřejných prostor. Projekt řeší bezpečnou distribuci energie, správu dobíjení a uživatelskou dostupnost.
+                            </p>
+                            <div class="project-features">
+                                <strong>Klíčové prvky:</strong>
+                                <ul>
+                                    <li>Řízení inteligentního nabíjení jednotlivých slotů (BMS ochrana)</li>
+                                    <li>Návrh mechanického zamykání a uvolňování powerbanky</li>
+                                    <li>Koncept uživatelského rozhraní pro rychlé vypůjčení</li>
+                                </ul>
+                            </div>
+                            <div class="project-tags">
+                                <span class="tag">Elektrotechnika</span>
+                                <span class="tag">Li-Ion & BMS</span>
+                                <span class="tag">Napájecí obvody</span>
+                                <span class="tag">Automatizace</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Projekt 2 -->
+                    <article class="project-card">
+                        <div class="project-content">
+                            <div class="project-header">
+                                <span class="project-category">IoT & Senzorika</span>
+                                <h3 class="project-title">Monitorovací IoT stanice (Arduino / ESP)</h3>
+                            </div>
+                            <p class="project-text">
+                                Projekt samostatné měřicí jednotky pro sledování teploty, vlhkosti a kvality vzduchu. Data jsou v reálném čase zpracovávána mikrokontrolérem a odesílána na přehledný displej nebo do webového rozhraní.
+                            </p>
+                            <div class="project-features">
+                                <strong>Klíčové prvky:</strong>
+                                <ul>
+                                    <li>Integrace digitálních senzorů a mikrokontroléru</li>
+                                    <li>Návrh schématu a sestavení na kontaktním i plošném spoji</li>
+                                    <li>Programování logiky vyhodnocování naměřených limitů</li>
+                                </ul>
+                            </div>
+                            <div class="project-tags">
+                                <span class="tag">Mikroelektronika</span>
+                                <span class="tag">Arduino / ESP</span>
+                                <span class="tag">Senzorika</span>
+                                <span class="tag">Hardware</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Projekt 3 (Bonus: Samotný web) -->
+                    <article class="project-card">
+                        <div class="project-content">
+                            <div class="project-header">
+                                <span class="project-category">Web & UI/UX</span>
+                                <h3 class="project-title">Osobní digitální vizitka & portfolio</h3>
+                            </div>
+                            <p class="project-text">
+                                Responzivní webová prezentace vytvořená v rámci předmětu Moderní technologie. Obsahuje interaktivní prvky (přepínání režimů, filtry dovedností), zabezpečení proti indexování a je hostována na GitHub Pages.
+                            </p>
+                            <div class="project-features">
+                                <strong>Klíčové prvky:</strong>
+                                <ul>
+                                    <li>100% responzivní design pro mobily i stolní monitory</li>
+                                    <li>Čistý HTML5, CSS3 a JavaScript bez zbytečných závislostí</li>
+                                    <li>Nasazení přes Git a GitHub Pages s noindex metadaty</li>
+                                </ul>
+                            </div>
+                            <div class="project-tags">
+                                <span class="tag">HTML5 & CSS3</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">GitHub Pages</span>
+                                <span class="tag">AI Pair Programming</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Moje budoucnost -->
+        <section id="future" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Vize & Cíle</span>
+                    <h2 class="section-title">Moje budoucnost</h2>
+                    <p class="section-desc">Kam směřuji a čemu se chci po úspěšném dokončení 4. ročníku věnovat.</p>
+                </div>
+
+                <div class="future-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-step">Krok 1</span>
+                            <h3>Úspěšná maturita v oboru Elektrotechnika</h3>
+                            <p>Završení studia na SPŠ, SOŠ a SOU Hradební, úspěšné složení maturitní zkoušky a obhájení praktických projektů.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-step">Krok 2</span>
+                            <h3>Praxe v moderní elektrotechnice / studium VŠ</h3>
+                            <p>Získání zkušeností v oblasti moderních technologií, obnovitelných zdrojů, automatizace nebo pokračování na vysoké škole technického směru.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-step">Krok 3</span>
+                            <h3>Vlastní inovativní projekty & leadership</h3>
+                            <p>Uplatnění technických znalostí a sportovních zkušeností s vedením týmu při vývoji a realizaci funkčních hardwarových řešení.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Kontakt -->
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Spojení</span>
+                    <h2 class="section-title">Kontakt</h2>
+                    <p class="section-desc">Máte zájem o spolupráci nebo otázku k mým projektům? Ozvěte se mi.</p>
+                </div>
+
+                <div class="contact-box">
+                    <div class="contact-card">
+                        <div class="contact-icon">📍</div>
+                        <h3>Lokalita & Škola</h3>
+                        <p>Hradec Králové<br>SPŠ, SOŠ a SOU Hradební</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">🐙</div>
+                        <h3>GitHub Repozitář</h3>
+                        <p>Kód tohoto webu a další projekty najdete na mém GitHub profilu.</p>
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline" id="github-link">
+                            Přejít na GitHub →
+                        </a>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">✉️</div>
+                        <h3>Zpráva</h3>
+                        <p>V souladu se zadáním a ochranou soukromí nezveřejňuji osobní telefon ani citlivé údaje.</p>
+                        <button class="btn btn-primary" onclick="alert('Díky za zájem! V případě dotazů mě kontaktujte prostřednictvím školního týmu nebo GitHubu.')">
+                            Poslat zprávu
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>© 2026 Lukáš Hofman — Všechna práva vyhrazena.</p>
+            <p class="footer-meta">Projekt předmětu Moderní technologie | SPŠ, SOŠ a SOU Hradební</p>
+            <p class="footer-security">
+                <small>🔒 Web je chráněn značkou <code>noindex</code> a neobsahuje žádná hesla ani citlivé osobní údaje.</small>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
