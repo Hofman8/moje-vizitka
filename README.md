@@ -65,8 +65,8 @@ git push -u origin main
 ## 📝 Podklady pro odevzdání do Microsoft Teams
 
 ### 1. Odkazy k odevzdání:
-* **Web:** `https://Hofman8.github.io/moje-portfolio/`
-* **Repozitář:** `https://github.com/Hofman8/moje-portfolio`
+* **Web:** `https://Hofman8.github.io/moje-vizitka/`
+* **Repozitář:** `https://github.com/Hofman8/moje-vizitka`
 
 ### 2. Krátké zhodnocení (připravené ke zkopírování):
 > Pro vytvoření webu jsem zvolil čisté HTML5, moderní CSS3 a JavaScript bez externích těžkých knihoven, což zajistilo bleskovou rychlost načítání a bezproblémové nasazení na GitHub Pages. Při tvorbě jsem jako asistenta využíval AI (Gemini), se kterým jsem konzultoval strukturu kódu, logiku ukládání barevného režimu a responzivní zobrazení. Největší výzvou bylo vyladění chování CSS gridu a animací při filtrování na mobilních displejích. Nejvíce se mi na výsledném webu líbí moderní dark mode design, plynulé interaktivní prvky a způsob, jakým prezentuje mé zaměření na elektrotechniku i sport.
