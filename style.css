@@ -508,6 +508,16 @@ body.light-theme .moon-icon { display: block; }
     gap: 1.75rem;
 }
 
+.projects-grid.single-item-grid {
+    display: flex;
+    justify-content: center;
+}
+
+.project-card.single-project {
+    max-width: 780px;
+    width: 100%;
+}
+
 .project-card {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
