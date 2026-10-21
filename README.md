@@ -69,7 +69,7 @@ git push -u origin main
 * **Repozitář:** `https://github.com/Hofman8/moje-vizitka`
 
 ### 2. Krátké zhodnocení (připravené ke zkopírování):
-> Pro vytvoření webu jsem zvolil čisté HTML5, moderní CSS3 a JavaScript bez externích knihoven, což zajistilo bleskovou rychlost načítání a bezproblémové publikování na GitHub Pages. Jako asistenta při vývoji jsem využíval AI (Gemini), se kterou jsem konzultoval strukturu kódu, logiku ukládání barevného režimu i interaktivní simulátor nabíjení pro projekt PoweRent. Nejvíce se mi na výsledném webu líbí interaktivní kalkulátor stanice PoweRent, dynamický efekt psacího stroje, moderní dark mode design a celková přehlednost.
+> Pro vytvoření webu jsem zvolil čisté HTML5, moderní CSS3 a JavaScript bez externích knihoven, což zajistilo bleskovou rychlost načítání a bezproblémové publikování na GitHub Pages. Jako asistenta při vývoji jsem využíval AI (Gemini), se kterou jsem konzultoval strukturu kódu, logiku ukládání barevného režimu, efekt psacího stroje a responzivní zobrazení na mobilních zařízeních. Nejvíce se mi na výsledném webu líbí moderní dark mode design, dynamický efekt psacího stroje, interaktivní filtrování mých technických i sportovních dovedností a celková přehlednost.
 
 ### 3. Potvrzení bezpečnosti:
 > „Zkontroloval jsem bezpečnostní požadavky projektu a ověřil, že web ani GitHub repozitář neobsahují žádná hesla, API klíče ani citlivé osobní údaje.“
@@ -80,14 +80,13 @@ git push -u origin main
 1. **0:00 – 0:45: Úvod & O mně**
    - Představení: Lukáš Hofman, 4. ročník elektrotechniky na SPŠ Hradební.
    - Vize: propojení technické preciznosti elektrotechniky s disciplínou z ledního hokeje a florbalu.
-2. **0:45 – 1:30: Projekt PoweRent & Interaktivní simulátor**
-   - Představení projektu automatizované sdílené stanice powerbank.
-   - Živá ukázka: posunutí posuvníku kapacity baterie $\rightarrow$ dynamický výpočet doby nabíjení a počtu dobití v reálném čase.
+2. **0:45 – 1:30: Projekt PoweRent**
+   - Představení projektu automatizované sdílené stanice powerbank pro studenty a veřejnost (bezpečná správa nabíjení a distribuce energie).
 3. **1:30 – 2:15: Funkčnost & Design (Živá ukázka)**
-   - Ukázka přepínače **Dark / Light módu** (uložení v `localStorage`).
-   - Ukázka **efektu psacího stroje** a horní svítící lišty čtení (**Scroll Progress Bar**).
-   - Ukázka **filtrování dovedností** a mobilní zobrazení (hamburger menu).
+   - Ukázka přepínače **Dark / Light módu** (uložení volby v `localStorage`).
+   - Ukázka **efektu psacího stroje** v úvodu a **svítící lišty nahoře** (Scroll Progress Bar).
+   - Ukázka **filtrování dovedností** podle kategorií a mobilní zobrazení (hamburger menu).
 4. **2:15 – 3:00: Technologie, bezpečnost & AI**
    - Zmínit čistý HTML5, CSS3, JS a nasazení přes GitHub Pages.
    - Ukázat `<meta name="robots" content="noindex...">` v kódu.
-   - Zmínit, že AI pomohla s návrhem struktury a matematického modelu simulátoru.
+   - Zmínit využití AI pro čistou architekturu a skripty.
