@@ -12,6 +12,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body class="dark-theme">
+    <!-- 3. Prvek: Svítící Scroll Progress Bar na horní hraně okna -->
+    <div id="scroll-progress" class="scroll-progress-bar"></div>
+
     <!-- Navigace -->
     <header class="navbar" id="navbar">
         <div class="container nav-container">
@@ -50,8 +53,14 @@
             <div class="container hero-container">
                 <div class="hero-badge">⚡ Student Elektrotechniky & Sportovec</div>
                 <h1 class="hero-title">Ahoj, já jsem <span class="gradient-text">Lukáš Hofman</span></h1>
+                
+                <!-- 2. Prvek: Efekt psacího stroje (Typing Animation) -->
+                <div class="hero-typing-wrapper">
+                    <span>Jsem </span><span id="typing-text" class="typing-text gradient-text"></span><span class="typing-cursor">|</span>
+                </div>
+
                 <p class="hero-subtitle">
-                    Student 4. ročníku na <strong>SPŠ, SOŠ a SOU Hradební</strong> v Hradci Králové se zaměřením na <strong>elektrotechniku</strong>.
+                    Student 4. ročníku na <strong>SPŠ, SOŠ a SOU Hradební</strong> se zaměřením na <strong>elektrotechniku</strong>.
                 </p>
                 <p class="hero-motto">
                     <em>„Spojuji technickou preciznost elektrotechniky s vytrvalostí a týmovým duchem ze sportovního hřiště.“</em>

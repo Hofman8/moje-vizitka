@@ -91,10 +91,19 @@ document.addEventListener('DOMContentLoaded', () => {
     // 4. ZVÝRAZNĚNÍ AKTIVNÍHO ODKAZU PŘI SCROLLU
     // ==========================================
     const sections = document.querySelectorAll('section[id]');
+    const progressBar = document.getElementById('scroll-progress');
 
-    function highlightNavOnScroll() {
-        const scrollY = window.pageYOffset;
+    function handleScroll() {
+        const scrollY = window.pageYOffset || document.documentElement.scrollTop;
 
+        // 4a. Scroll Progress Bar
+        if (progressBar) {
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (scrollY / height) * 100;
+            progressBar.style.width = scrolled + '%';
+        }
+
+        // 4b. Zvýraznění aktivní sekce v menu
         sections.forEach(current => {
             const sectionHeight = current.offsetHeight;
             const sectionTop = current.offsetTop - 120;
@@ -111,5 +120,52 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    window.addEventListener('scroll', highlightNavOnScroll);
+    window.addEventListener('scroll', handleScroll);
+
+    // ==========================================
+    // 5. EFEKT PSACÍHO STROJE (TYPING ANIMATION)
+    // ==========================================
+    const typingElement = document.getElementById('typing-text');
+    if (typingElement) {
+        const phrases = [
+            "student elektrotechniky",
+            "aktivní sportovec (hokej & florbal)",
+            "tvůrce projektu PoweRent",
+            "budoucí specialista na automatizaci"
+        ];
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typingSpeed = 80;
+        const erasingSpeed = 40;
+        const pauseDelay = 1800;
+
+        function typeLoop() {
+            const currentPhrase = phrases[phraseIndex];
+
+            if (isDeleting) {
+                typingElement.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingElement.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            let nextSpeed = isDeleting ? erasingSpeed : typingSpeed;
+
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                nextSpeed = pauseDelay;
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                nextSpeed = 400;
+            }
+
+            setTimeout(typeLoop, nextSpeed);
+        }
+
+        // Spuštění efektu psaní
+        setTimeout(typeLoop, 500);
+    }
 });
