@@ -49,7 +49,7 @@ git commit -m "Initial commit: Lukáš Hofman portfolio"
 5. Zkopíruj příkaz pro propojení (bude vypadat takto):
 ```bash
 git branch -M main
-git remote add origin https://github.com/<TVŮJ-GITHUB-NICK>/moje-portfolio.git
+git remote add origin https://github.com/Hofman8/moje-portfolio.git
 git push -u origin main
 ```
 
@@ -58,15 +58,15 @@ git push -u origin main
 2. V sekci **Build and deployment** u položky **Branch** vyber `main` a složku `/ (root)`.
 3. Klikni na **Save**.
 4. Během 1–2 minut bude tvůj web dostupný na adrese:  
-   👉 `https://<TVŮJ-GITHUB-NICK>.github.io/moje-portfolio/`
+   👉 `https://Hofman8.github.io/moje-portfolio/`
 
 ---
 
 ## 📝 Podklady pro odevzdání do Microsoft Teams
 
 ### 1. Odkazy k odevzdání:
-* **Web:** `https://<TVŮJ-GITHUB-NICK>.github.io/moje-portfolio/`
-* **Repozitář:** `https://github.com/<TVŮJ-GITHUB-NICK>/moje-portfolio`
+* **Web:** `https://Hofman8.github.io/moje-portfolio/`
+* **Repozitář:** `https://github.com/Hofman8/moje-portfolio`
 
 ### 2. Krátké zhodnocení (připravené ke zkopírování):
 > Pro vytvoření webu jsem zvolil čisté HTML5, moderní CSS3 a JavaScript bez externích těžkých knihoven, což zajistilo bleskovou rychlost načítání a bezproblémové nasazení na GitHub Pages. Při tvorbě jsem jako asistenta využíval AI (Gemini), se kterým jsem konzultoval strukturu kódu, logiku ukládání barevného režimu a responzivní zobrazení. Největší výzvou bylo vyladění chování CSS gridu a animací při filtrování na mobilních displejích. Nejvíce se mi na výsledném webu líbí moderní dark mode design, plynulé interaktivní prvky a způsob, jakým prezentuje mé zaměření na elektrotechniku i sport.
