@@ -168,4 +168,35 @@ document.addEventListener('DOMContentLoaded', () => {
         // Spuštění efektu psaní
         setTimeout(typeLoop, 500);
     }
+
+    // ==========================================
+    // 6. INTERAKTIVNÍ KALKULÁTOR POWERENT
+    // ==========================================
+    const batterySlider = document.getElementById('battery-slider');
+    const batteryValLabel = document.getElementById('battery-val');
+    const chargeTimeEl = document.getElementById('charge-time');
+    const chargeCyclesEl = document.getElementById('charge-cycles');
+
+    if (batterySlider && batteryValLabel && chargeTimeEl && chargeCyclesEl) {
+        function updatePoweRentCalc() {
+            const capacity = parseInt(batterySlider.value, 10);
+            
+            // Formát čísla s mezerou (např. 4 200 mAh)
+            batteryValLabel.textContent = capacity.toLocaleString('cs-CZ') + ' mAh';
+
+            // PoweRentka: 10 000 mAh baterie, 88% efektivita měniče (usable ~8 800 mAh)
+            const usablePowerbank = 8800;
+            const cycles = (usablePowerbank / capacity).toFixed(1);
+            chargeCyclesEl.textContent = cycles + '×';
+
+            // Odhad doby do 80 % (při inteligentním rychlonabíjení ~3.5A avg)
+            // Základní čas + proporcionální čas podle kapacity
+            const minutesTo80 = Math.round((capacity * 0.8 / 3800) * 60 + 8);
+            chargeTimeEl.textContent = '~' + minutesTo80 + ' min';
+        }
+
+        batterySlider.addEventListener('input', updatePoweRentCalc);
+        // Inicializace výchozího stavu
+        updatePoweRentCalc();
+    }
 });
